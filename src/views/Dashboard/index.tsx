@@ -4,6 +4,7 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 
 import DashboardLayout from '../../shared/Layout/DashboardLayout';
+import { Sidebar } from './Content';
 import { useStyles } from './styles';
 
 const DashboardPage: React.FC<{}> = () => {
@@ -11,7 +12,9 @@ const DashboardPage: React.FC<{}> = () => {
   return (
     <DashboardLayout>
       {/* Navbar component */}
-      <nav></nav>
+      <nav>
+        <Sidebar />
+      </nav>
       {/* EndNavbarComponent */}
 
       {/* Main Page Component */}
