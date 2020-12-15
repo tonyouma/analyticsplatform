@@ -26,4 +26,4 @@ jobs:
       - name: Release
         run: yarn semantic-release
         env:
-          GITHUB_TOKEN: ${{ secrets.WEB_APP_SECRET }}
+          GITHUB_TOKEN: ${{ ANALYTICS_APP_SECRET }}
