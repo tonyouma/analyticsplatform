@@ -1,0 +1,29 @@
+name: Release
+
+# Run the workflow when a Pull Request is opened or when changes are pushed to main
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  release:
+    # Only release on push to main
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      - name: Install
+        run: yarn install
+
+      - name: Release
+        run: yarn semantic-release
+        env:
+          GITHUB_TOKEN: ${{ secrets.WEB_APP_SECRET }}

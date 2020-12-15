@@ -1,0 +1,11 @@
+{
+	"folders": [{
+		"path": "."
+	}],
+	"settings": {
+		"prettier.configPath": ".prettierrc",
+		"eslint.alwaysShowStatus": true,
+		"editor.formatOnSave": true,
+		"editor.defaultFormatter": "esbenp.prettier-vscode",
+	}
+}
