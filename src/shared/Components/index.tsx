@@ -1,3 +1,4 @@
 import NavItem from './NavItem';
+import ButtonComponent from './Button';
 
-export { NavItem };
+export { NavItem, ButtonComponent };
