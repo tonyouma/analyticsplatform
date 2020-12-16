@@ -17,6 +17,10 @@ export const useStyles = makeStyles((theme: Theme) =>
     },
     main: {
       flex: 1,
+      padding: 40,
+      // [theme.breakpoints.up('sm')]: {
+      //   padding: 0,
+      // },
     },
   })
 );

@@ -11,7 +11,7 @@ const useStyles = makeStyles(() =>
       minHeight: '100vh',
       // paddingRight: 20,
       // paddingLeft: 70,
-      overflow: 'hidden',
+      // overflow: 'hidden',
     },
   })
 );

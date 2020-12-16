@@ -3,15 +3,9 @@ import React from 'react';
 
 // import { Link } from 'react-router-dom';
 
-import {
-  Grid,
-  Box,
-  Avatar,
-  Typography,
-  LinearProgress,
-} from '@material-ui/core';
-// import { Avatar, IconButton, Grid, Typography } from '@material-ui/core';
+import { Grid, Box, Avatar, Typography } from '@material-ui/core';
 
+import ProfilePhoto from '../../../../../assets/profile.png';
 const user_name: string = 'Sandra Mamai';
 const user_email: string = 'smamai@accesafaya.com';
 // const user_name_initials = 'SM';
@@ -29,11 +23,9 @@ const HeaderProfile: React.FC<{}> = () => {
         <Typography>{user_name}</Typography>
         <Typography>{user_email}</Typography>
       </Grid>
+
       <Grid item>
-        <LinearProgress value={75.5} variant="determinate" />
-      </Grid>
-      <Grid item>
-        <Avatar src={'../assets'} alt="SM" style={avatarStyles}></Avatar>
+        <Avatar src={ProfilePhoto} alt="SM" style={avatarStyles}></Avatar>
       </Grid>
     </Box>
   );
