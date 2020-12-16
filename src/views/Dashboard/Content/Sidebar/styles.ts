@@ -8,7 +8,7 @@ export const useStyles = makeStyles((theme: Theme) =>
       display: 'flex',
     },
     paper: {
-      borderRight: 'none',
+      borderRight: '1px solid #e5e5e5',
       justifyContent: 'center',
     },
     drawer: {

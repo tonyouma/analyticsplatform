@@ -1,30 +1,33 @@
 import React from 'react';
 
 import { AppBar, Grid, Toolbar } from '@material-ui/core';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Plus as AddIcon } from 'react-feather';
 
 import { ButtonComponent } from '../../../../shared/Components';
 
 import HeaderProfile from './HeaderProfile';
+import HeaderProgressBar from './HeaderProgressBar';
 
-const headerStyles: React.CSSProperties = {
-  width: '100%',
-  display: 'flex',
-  flex: 1,
-  justifyContent: 'space-between',
-  alignItems: 'center',
-  color: '#333333',
-};
-
-const useStyles = makeStyles(() =>
+const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     appBarStyles: {
       backgroundColor: '#ffffff',
       color: '#33333',
       paddingTop: 20,
       paddingLeft: 20,
-      paddingRight: 40,
+      paddingRight: 65,
+    },
+    headerStyles: {
+      width: '100%',
+      display: 'flex',
+      flex: 1,
+      justifyContent: 'space-between',
+      alignItems: 'center',
+      color: '#333333',
+      [theme.breakpoints.down('sm')]: {
+        flexFlow: 'column-reverse',
+      },
     },
   })
 );
@@ -34,11 +37,14 @@ const HeaderComponent: React.FC<{}> = () => {
   return (
     <AppBar position="static" elevation={0} className={classes.appBarStyles}>
       <Toolbar disableGutters>
-        <Grid container spacing={1} style={headerStyles}>
-          <Grid item>
+        <Grid container spacing={1} className={classes.headerStyles}>
+          <Grid item xs={6}>
             <ButtonComponent endIcon={<AddIcon />}>
               Add Assessment
             </ButtonComponent>
+          </Grid>
+          <Grid item xs={2}>
+            <HeaderProgressBar />
           </Grid>
           <Grid item>
             <HeaderProfile />
