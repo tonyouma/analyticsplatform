@@ -1,4 +1,3 @@
-import { Typography } from '@material-ui/core';
 import React from 'react';
 
 import Box from '@material-ui/core/Box';
@@ -6,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import DashboardLayout from '../../shared/Layout/DashboardLayout';
 import { HeaderComponent, Sidebar } from './Content';
 import { useStyles } from './styles';
+import DashboardContent from './DashboardContents';
 
 const DashboardPage: React.FC<{}> = () => {
   const classes = useStyles();
@@ -21,7 +21,7 @@ const DashboardPage: React.FC<{}> = () => {
       <Box className={classes.app}>
         <HeaderComponent />
         <main className={classes.main}>
-          <Typography>Hello world</Typography>
+          <DashboardContent />
         </main>
       </Box>
 
