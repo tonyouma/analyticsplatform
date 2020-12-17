@@ -8,21 +8,19 @@ export enum fontWeight {
   bold = 700,
 }
 
-// export enum fontFamily {
-//   lato = 'Lato',
-// }
-
 export interface IColors {
   primary: string;
   // secondary: string;
   text: string;
+  textSecondary: string;
   white: string;
 }
 
 export const colors: IColors = {
-  primary: '#243F96',
+  primary: '#4E1EDA',
   text: '#333333',
   white: '#FFFFFF',
+  textSecondary: '#afaeae',
 };
 
 export const appTheme = createMuiTheme({
@@ -46,7 +44,7 @@ export const appTheme = createMuiTheme({
       fontWeight: fontWeight.normal,
     },
     body2: {
-      fontSize: 24,
+      fontSize: 34,
       fontWeight: fontWeight.normal,
     },
     button: {
@@ -63,8 +61,8 @@ export const appTheme = createMuiTheme({
       lineHeight: '120.8%',
     },
     h3: {
-      fontSize: 50,
-      //   fontFamily: fontFamily.lato,
+      fontSize: 40,
+      fontWeight: fontWeight.mediumTwo,
     },
     h4: {
       fontSize: 24,

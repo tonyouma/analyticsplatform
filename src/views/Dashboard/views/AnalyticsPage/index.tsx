@@ -1,8 +1,12 @@
 import React from 'react';
 
-import { Typography, Container, Grid, Paper, Box } from '@material-ui/core';
+import { Typography, Container, Grid, Box } from '@material-ui/core';
 
-import { VisitCard, TitleComponent } from '../../../../shared/Components';
+import {
+  VisitCard,
+  TitleComponent,
+  Wrapper,
+} from '../../../../shared/Components';
 import { visits } from '../../../../shared/data/visitInfo';
 
 import MoreVertIcon from '@material-ui/icons/MoreVert';
@@ -11,8 +15,6 @@ import MonitoringPeriod from './MonitoringPeriod';
 import StaffListView from './TableComponent';
 import MonitorCard from './MonitorCards';
 
-// const location = 'Donholm';
-// const visit_count = 12;
 const icon = MoreVertIcon;
 const margin = 20;
 
@@ -24,7 +26,7 @@ const AnalyticsPage: React.FC<{}> = () => {
 
       <Grid container spacing={4}>
         <Grid item sm={3} xs={12}>
-          <Box component={Paper} style={{ padding: 30 }}>
+          <Wrapper>
             <TitleComponent>Visits</TitleComponent>
             <Box>
               {visits.map((visit, index) => (
@@ -37,7 +39,7 @@ const AnalyticsPage: React.FC<{}> = () => {
                 />
               ))}
             </Box>
-          </Box>
+          </Wrapper>
         </Grid>
         <Grid item sm={9} xs={12}>
           <KeyIssues />

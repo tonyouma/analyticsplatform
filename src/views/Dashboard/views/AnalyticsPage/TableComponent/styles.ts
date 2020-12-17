@@ -5,7 +5,6 @@ export const theme = createMuiTheme({
   overrides: {
     MuiTableCell: {
       root: {
-        // margin: '5px 33px',
         padding: 12,
         height: '50px',
         fontSize: 13,

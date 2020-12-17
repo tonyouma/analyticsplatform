@@ -1,72 +1,59 @@
 import React from 'react';
 
-import { Grid, Paper, Box } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
-import { VisitCard, TitleComponent } from '../../../../shared/Components';
+import {
+  IssueCard,
+  TitleComponent,
+  Wrapper,
+} from '../../../../shared/Components';
 
-import MoreVertIcon from '@material-ui/icons/MoreVert';
+const locationOne = 'Kosovo';
+const issueOne = 'Wrong Prescription';
 
-const location = 'Donholm';
-const visit_count = 12;
-const icon = MoreVertIcon;
+const locationTwo = 'Kiambiu';
+const issueTwo = 'Opened Late';
+
+const locationThree = 'NewYork';
+const issueThree = 'Bad Receipt';
+
+const locationFour = 'Mathare';
+const issueFour = 'Late Check In';
+
+const locationFive = 'Kiambiu';
+const issueFive = 'Delay in Lab';
+
+const locationSix = 'Kiambiu';
+const issueSix = 'Careless waste disposal';
 
 const title: string = 'key issues';
+
 const KeyIssues: React.FC<{}> = () => {
   return (
     <>
-      <Box component={Paper} style={{ padding: 30 }}>
+      <Wrapper>
         <TitleComponent>{title}</TitleComponent>
         <Grid container spacing={2} style={{ paddingTop: 20 }}>
           <Grid item md={3}>
-            <VisitCard
-              location={location}
-              visit_count={visit_count}
-              icon={icon}
-              // key={index}
-            />
+            <IssueCard location={locationOne} description={issueOne} />
           </Grid>
           <Grid item md={4}>
-            <VisitCard
-              location={location}
-              visit_count={visit_count}
-              icon={icon}
-              // key={index}
-            />
+            <IssueCard location={locationTwo} description={issueTwo} />
           </Grid>
           <Grid item md={3}>
-            <VisitCard
-              location={location}
-              visit_count={visit_count}
-              icon={icon}
-              // key={index}
-            />
+            <IssueCard location={locationThree} description={issueThree} />
           </Grid>
           <Grid item md={2}>
-            <VisitCard
-              location={location}
-              visit_count={visit_count}
-              icon={icon}
-              // key={index}
-            />
+            <IssueCard location={locationFour} description={issueFour} />
           </Grid>
           <Grid item md={4}>
-            <VisitCard
-              location={location}
-              visit_count={visit_count}
-              icon={icon}
-              // key={index}
-            />
+            <IssueCard location={locationFive} description={issueFive} />
           </Grid>
           <Grid item md={3}>
-            <VisitCard
-              location={location}
-              visit_count={visit_count}
-              icon={icon}
-              // key={index}
-            />
+            <IssueCard location={locationSix} description={issueSix} />
           </Grid>
         </Grid>
-      </Box>
+      </Wrapper>
     </>
   );
 };
