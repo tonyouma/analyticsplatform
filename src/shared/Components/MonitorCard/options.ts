@@ -1,0 +1,37 @@
+export const options = {
+  legend: { display: false },
+  maintainAspectRatio: false,
+  responsive: true,
+  axes: { display: false },
+  layout: {
+    padding: {
+      left: 20,
+      right: 30,
+      bottom: 5,
+      top: 15,
+    },
+  },
+  scales: {
+    yAxes: [
+      {
+        ticks: {
+          beginAtZero: true,
+        },
+        display: false,
+        gridLines: {
+          drawOnChartArea: false,
+          drawBorder: false,
+          scaleShowLabels: false,
+        },
+      },
+    ],
+    xAxes: [
+      {
+        gridLines: {
+          drawOnChartArea: false,
+        },
+        display: false,
+      },
+    ],
+  },
+};
