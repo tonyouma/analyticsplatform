@@ -2,7 +2,6 @@
 /* eslint-disable no-unused-vars */
 import React, { ElementType } from 'react';
 
-import styled from 'styled-components';
 import {
   Card,
   CardContent,
@@ -11,27 +10,25 @@ import {
   IconButton,
 } from '@material-ui/core';
 
-import { colors } from '../../../theme/theme';
+import MoreVertIcon from '@material-ui/icons/MoreVert';
+
+import { colors, fontWeight } from '../../../theme/theme';
 interface IVisitProps {
   location: string;
-  visit_count: number;
-  icon: ElementType;
-  margin?: number;
+  description: string;
 }
 
 const cardStyles: React.CSSProperties = {
-  marginTop: 20,
-  marginBottom: 20,
   boxShadow: 'none',
   border: '1px solid rgba(0, 0, 0, 0.23)',
 };
 
-const VisitCard: React.FC<IVisitProps> = (props) => {
-  const { location, visit_count, icon: Icon, margin } = props;
+const IssuesCard: React.FC<IVisitProps> = (props) => {
+  const { location, description } = props;
 
   return (
     <Card style={cardStyles}>
-      <CardContent style={{ padding: '5px 10px' }}>
+      <CardContent style={{ padding: '5px 0 5px 5px' }}>
         <Box
           style={{
             display: 'flex',
@@ -39,15 +36,17 @@ const VisitCard: React.FC<IVisitProps> = (props) => {
             alignItems: 'center',
           }}
         >
-          <Box style={{ display: 'flex' }}>
-            <Typography style={{ color: colors.primary }}>
-              {visit_count}
+          <Box>
+            <Typography style={{ fontWeight: fontWeight.mediumTwo }}>
+              {description}
             </Typography>
-            <Typography style={{ paddingLeft: 30 }}>{location}</Typography>
+            <Typography style={{ color: colors.textSecondary }}>
+              {location}
+            </Typography>
           </Box>
           <IconButton>
             {' '}
-            <Icon></Icon>
+            <MoreVertIcon />
           </IconButton>
         </Box>
       </CardContent>
@@ -55,4 +54,4 @@ const VisitCard: React.FC<IVisitProps> = (props) => {
   );
 };
 
-export default VisitCard;
+export default IssuesCard;
