@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 
 import {
   TitleComponent,
@@ -14,9 +14,16 @@ const MonitoringPeriod: React.FC<{}> = () => {
     <>
       <Wrapper>
         <TitleComponent>{title}</TitleComponent>
-        <Box style={{ paddingTop: 20 }}>
-          <ButtonGroupComponent />
-        </Box>
+
+        <Grid container style={{ paddingTop: 20 }} spacing={3}>
+          <Grid item>
+            <ButtonGroupComponent />
+          </Grid>
+
+          <Grid item>
+            <ButtonGroupComponent />
+          </Grid>
+        </Grid>
       </Wrapper>
     </>
   );

@@ -15,9 +15,6 @@ const useStyles = makeStyles({
     height: 48,
     padding: '12px 30px',
     textTransform: 'none',
-    '&:hover': {
-      boxShadow: 'none',
-    },
   },
 });
 

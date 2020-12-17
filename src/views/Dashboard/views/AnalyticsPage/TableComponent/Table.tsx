@@ -11,7 +11,7 @@ import {
 
 import { ThemeProvider } from '@material-ui/core/styles';
 
-import { theme } from './styles';
+import { theme, useStyles } from './styles';
 import {
   EfficientProgressBar,
   ReportedProgressBar,
@@ -59,12 +59,12 @@ const staffData = [
 ];
 
 const TableComponent: React.FC<{}> = () => {
-  // const classes = useStyles()
+  const classes = useStyles();
   return (
     <>
       <ThemeProvider theme={theme}>
         {/* <TableContainer> */}
-        <Table>
+        <Table className={classes.table}>
           {/* Table Head */}
           <TableHead>
             <TableRow>
