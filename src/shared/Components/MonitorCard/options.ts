@@ -6,9 +6,9 @@ export const options = {
   layout: {
     padding: {
       left: 20,
-      right: 30,
-      bottom: 5,
-      top: 15,
+      right: 10,
+      bottom: 9,
+      top: 5,
     },
   },
   scales: {
