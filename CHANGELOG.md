@@ -1,3 +1,12 @@
+## [1.0.1](https://github.com/TonyOuma/analyticsplatform/compare/v1.0.0...v1.0.1) (2020-12-18)
+
+
+### Bug Fixes
+
+* site functionalities & stylings ([394d3ae](https://github.com/TonyOuma/analyticsplatform/commit/394d3ae1b5e77fc623ac2ab59a26b3720e10ce8b))
+* update progress bar colors ([e2c39b7](https://github.com/TonyOuma/analyticsplatform/commit/e2c39b732ad8a9bd8cde0674df55ecbceff56347))
+* view page styling ([b336105](https://github.com/TonyOuma/analyticsplatform/commit/b336105195a04d1365521021039c509d8fde354a))
+
 # 1.0.0 (2020-12-17)
 
 
