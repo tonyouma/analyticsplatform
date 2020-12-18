@@ -27,11 +27,6 @@ const useStyles = makeStyles({
     marginBottom: 20,
     boxShadow: 'none',
     border: '1px solid rgba(0, 0, 0, 0.23)',
-    // '&:hover': {
-    //   boxShadow: 'none',
-    //   color: 'red',
-    //   // background: '#4E1ED4',
-    // },
   },
   textStyle: {
     color: colors.primary,

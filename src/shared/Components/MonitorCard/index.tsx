@@ -1,46 +1,35 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable react/prop-types */
-import React from 'react';
-
+import React, { useState } from 'react';
 import { Line } from '@reactchartjs/react-chart.js';
 import { Typography, Card, CardContent, Box } from '@material-ui/core';
-// import styled from 'styled-components';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
-
 import { options } from './options';
 
+import useStyles from './styles';
 import { colors } from '../../../theme/theme';
 
 const type = 'line';
-
-// const cardStyles: React.CSSProperties = {
-
-// };
-
-const useStyles = makeStyles((theme: Theme) =>
-  createStyles({
-    cardStyles: {
-      [theme.breakpoints.down('sm')]: {
-        width: 323,
-      },
-      boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.10)',
-      padding: '10px 20px',
-      height: 192,
-    },
-  })
-);
 
 //
 
 interface ICardProps {
   title: string;
   count: string | number;
+  countChange: string;
   chartTitle: string;
   data: any;
+  icon: React.ReactElement;
 }
 
 const MonitorCardComponent: React.FC<ICardProps> = (props) => {
-  const classes = useStyles();
-  const { title, count, chartTitle, data } = props;
+  const { title, count, countChange, chartTitle, data, icon } = props;
+
+  const positiveChange = countChange && countChange.charAt(0) === '+';
+
+  const classes = useStyles({ positiveChange });
+
+  const [changeIcon] = useState();
+
   return (
     <Card className={classes.cardStyles}>
       <CardContent>
@@ -51,8 +40,11 @@ const MonitorCardComponent: React.FC<ICardProps> = (props) => {
             <Typography style={{ color: colors.textSecondary }}>
               {chartTitle}
             </Typography>
+            <Typography className={classes.differenceValue}>
+              {icon} {countChange}
+            </Typography>
           </Box>{' '}
-          <Box width={'78%'}>
+          <Box width={'63%'}>
             <Line data={data} options={options} type={type} />
           </Box>{' '}
         </Box>

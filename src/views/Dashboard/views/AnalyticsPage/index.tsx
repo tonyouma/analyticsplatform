@@ -2,8 +2,6 @@ import React from 'react';
 
 import { Typography, Container, Grid, Box } from '@material-ui/core';
 
-// import { createStyles, Theme, makeStyles } from '@material-ui/core/styles';
-
 import {
   VisitCard,
   TitleComponent,
@@ -14,25 +12,14 @@ import { visits } from '../../../../shared/data/visitInfo';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import KeyIssues from './KeyIssues';
 import MonitoringPeriod from './MonitoringPeriod';
-import StaffListView from './TableComponent';
+import { TableComponent } from './TableComponent';
 import MonitorCard from './MonitorCards';
 
 const icon = MoreVertIcon;
 const margin = 20;
 
-// const useStyles = makeStyles((theme: Theme) =>
-//   createStyles({
-//     root: {
-//       [theme.breakpoints.up('md')]: {
-//         paddingLeft: 20,
-//       },
-//     },
-//   })
-// );
-
 const title: string = 'Analytics';
 const AnalyticsPage: React.FC<{}> = () => {
-  // const classes = useStyles();
   return (
     <Container maxWidth={false}>
       <Typography variant="h3">{title}</Typography>
@@ -58,7 +45,7 @@ const AnalyticsPage: React.FC<{}> = () => {
           <KeyIssues />
           <MonitoringPeriod />
           <MonitorCard />
-          <StaffListView />
+          <TableComponent />
         </Grid>
       </Grid>
     </Container>

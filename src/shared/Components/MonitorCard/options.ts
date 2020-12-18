@@ -6,7 +6,7 @@ export const options = {
   layout: {
     padding: {
       left: 20,
-      right: 10,
+      right: 0,
       bottom: 9,
       top: 5,
     },

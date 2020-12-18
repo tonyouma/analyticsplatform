@@ -1,13 +1,11 @@
 import React from 'react';
 import clsx from 'clsx';
 
-import Drawer from '@material-ui/core/Drawer';
-import List from '@material-ui/core/List';
+import { NavLink } from 'react-router-dom';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import { useStyles } from './styles';
 
-import { NavItem } from '../../../../shared/Components';
-import { NavigationItem } from '../../../../models/navItem';
+import { Drawer, List, ListItem, ListItemIcon } from '@material-ui/core';
 import {
   Folder as FolderIcon,
   Activity as ActivityIcon,
@@ -15,22 +13,26 @@ import {
 } from 'react-feather';
 import SmsOutlinedIcon from '@material-ui/icons/SmsOutlined';
 
-const NavListItems: Array<NavigationItem> = [
+const NavListItems = [
   {
-    icon: FolderIcon,
-    link: '/',
+    title: 'Dashboard',
+    href: '/dashboard',
+    icon: <FolderIcon />,
   },
   {
-    icon: ActivityIcon,
-    link: '/analytics',
+    title: 'Tables',
+    href: '/analytics',
+    icon: <ActivityIcon />,
   },
   {
-    icon: SmsOutlinedIcon,
-    link: '/',
+    title: 'Typography',
+    href: '/typography',
+    icon: <SmsOutlinedIcon />,
   },
   {
-    icon: SlidersIcon,
-    link: '/',
+    title: 'Icons',
+    href: '/icons',
+    icon: <SlidersIcon />,
   },
 ];
 
@@ -55,9 +57,19 @@ const SideBar: React.FC<{}> = () => {
           }),
         }}
       >
-        <List>
-          {NavListItems.map((item, index) => (
-            <NavItem icon={item.icon} key={index} link={item.link} />
+        <List component="div" disablePadding>
+          {NavListItems.map((page) => (
+            <ListItem
+              key={page.title}
+              activeClassName={classes.activeListItem}
+              className={classes.listItem}
+              component={NavLink}
+              to={page.href}
+            >
+              <ListItemIcon className={classes.listItemIcon}>
+                {page.icon}
+              </ListItemIcon>
+            </ListItem>
           ))}
         </List>
       </Drawer>
