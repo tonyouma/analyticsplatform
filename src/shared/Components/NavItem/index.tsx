@@ -11,6 +11,7 @@ interface INavigationItemProps {
   icon: ElementType;
   link: string;
   className?: string;
+  // component: any;
 }
 
 const NavItem: React.FC<INavigationItemProps> = (props) => {

@@ -1,13 +1,15 @@
 import React from 'react';
 
 import Box from '@material-ui/core/Box';
+import PropTypes from 'prop-types';
 
 import DashboardLayout from '../../shared/Layout/DashboardLayout';
 import { HeaderComponent, Sidebar } from './Content';
 import { useStyles } from './styles';
-import DashboardContent from './DashboardContents';
 
-const DashboardPage: React.FC<{}> = () => {
+const DashboardPage: React.FC<React.PropsWithChildren<{}>> = (props) => {
+  // eslint-disable-next-line react/prop-types
+  const { children } = props;
   const classes = useStyles();
   return (
     <DashboardLayout>
@@ -20,14 +22,16 @@ const DashboardPage: React.FC<{}> = () => {
       {/* Main Page Component */}
       <Box className={classes.app}>
         <HeaderComponent />
-        <main className={classes.main}>
-          <DashboardContent />
-        </main>
+        <main className={classes.main}>{children}</main>
       </Box>
 
       {/* End Main Page Component */}
     </DashboardLayout>
   );
+};
+
+DashboardPage.propTypes = {
+  children: PropTypes.any,
 };
 
 export default DashboardPage;

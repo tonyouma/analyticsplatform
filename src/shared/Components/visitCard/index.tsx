@@ -2,6 +2,8 @@
 /* eslint-disable no-unused-vars */
 import React, { ElementType } from 'react';
 
+import { makeStyles } from '@material-ui/core/styles';
+
 import styled from 'styled-components';
 import {
   Card,
@@ -19,18 +21,27 @@ interface IVisitProps {
   margin?: number;
 }
 
-const cardStyles: React.CSSProperties = {
-  marginTop: 20,
-  marginBottom: 20,
-  boxShadow: 'none',
-  border: '1px solid rgba(0, 0, 0, 0.23)',
-};
+const useStyles = makeStyles({
+  cardStyles: {
+    marginTop: 20,
+    marginBottom: 20,
+    boxShadow: 'none',
+    border: '1px solid rgba(0, 0, 0, 0.23)',
+  },
+  textStyle: {
+    color: colors.primary,
+    '&:hover': {
+      color: 'red',
+    },
+  },
+});
 
 const VisitCard: React.FC<IVisitProps> = (props) => {
   const { location, visit_count, icon: Icon, margin } = props;
+  const classes = useStyles();
 
   return (
-    <Card style={cardStyles}>
+    <Card className={classes.cardStyles}>
       <CardContent style={{ padding: '5px 10px' }}>
         <Box
           style={{
@@ -40,9 +51,7 @@ const VisitCard: React.FC<IVisitProps> = (props) => {
           }}
         >
           <Box style={{ display: 'flex' }}>
-            <Typography style={{ color: colors.primary }}>
-              {visit_count}
-            </Typography>
+            <Typography className={classes.textStyle}>{visit_count}</Typography>
             <Typography style={{ paddingLeft: 30 }}>{location}</Typography>
           </Box>
           <IconButton>

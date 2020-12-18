@@ -12,7 +12,7 @@ import { visits } from '../../../../shared/data/visitInfo';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import KeyIssues from './KeyIssues';
 import MonitoringPeriod from './MonitoringPeriod';
-import StaffListView from './TableComponent';
+import { TableComponent } from './TableComponent';
 import MonitorCard from './MonitorCards';
 
 const icon = MoreVertIcon;
@@ -45,7 +45,7 @@ const AnalyticsPage: React.FC<{}> = () => {
           <KeyIssues />
           <MonitoringPeriod />
           <MonitorCard />
-          <StaffListView />
+          <TableComponent />
         </Grid>
       </Grid>
     </Container>

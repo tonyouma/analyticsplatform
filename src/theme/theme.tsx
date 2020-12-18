@@ -46,6 +46,7 @@ export const appTheme = createMuiTheme({
     body2: {
       fontSize: 34,
       fontWeight: fontWeight.normal,
+      lineHeight: 1,
     },
     button: {
       fontSize: 16,
