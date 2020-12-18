@@ -11,10 +11,11 @@ export const dataOne = {
 };
 
 export const dataTwo = {
+  labels: ['1', '2', '3', '4', '6', '7'],
   datasets: [
     {
       label: '# of Patients',
-      data: [2, 14, 12, 7, 6, 6, 3],
+      data: [3, 12, 10, 8, 8, 6, 4],
       fill: false,
       borderColor: '#C51E3A',
     },
@@ -26,7 +27,7 @@ export const dataThree = {
   datasets: [
     {
       label: '# of Patients',
-      data: [1, 12, 10, 8, 19, 17],
+      data: [3, 12, 10, 8, 19, 17],
       fill: false,
       borderColor: '#77DFBA',
     },

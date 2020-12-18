@@ -12,7 +12,7 @@ import {
 const theme = createMuiTheme({
   palette: {
     primary: {
-      main: '#1a90ff',
+      main: '#4E1ED4',
     },
   },
   overrides: {

@@ -11,7 +11,6 @@ const useStyles = makeStyles({
     borderRight: 'none',
     borderLeft: 'none',
     borderRadius: 0,
-    // padding: '12px 30px',
     textTransform: 'none',
   },
 });

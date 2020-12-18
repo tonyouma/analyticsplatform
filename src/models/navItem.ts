@@ -1,6 +1,7 @@
 import { ElementType } from 'react';
 
 export interface NavigationItem {
-  link: string;
-  icon: ElementType;
+  title: string;
+  href: string;
+  icon: React.FunctionComponent;
 }

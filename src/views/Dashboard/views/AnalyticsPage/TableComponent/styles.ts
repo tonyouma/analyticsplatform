@@ -1,4 +1,4 @@
-import { createMuiTheme } from '@material-ui/core/styles';
+import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
 import { fontWeight } from '../../../../../theme/theme';
 
 export const theme = createMuiTheme({
@@ -22,5 +22,11 @@ export const theme = createMuiTheme({
         height: '70px',
       },
     },
+  },
+});
+
+export const useStyles = makeStyles({
+  table: {
+    minWidth: 650,
   },
 });

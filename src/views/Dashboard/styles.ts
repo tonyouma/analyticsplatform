@@ -4,6 +4,11 @@ const drawerWidth = 290;
 
 export const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      [theme.breakpoints.up('md')]: {
+        padding: 5,
+      },
+    },
     drawer: {
       [theme.breakpoints.up('sm')]: {
         width: drawerWidth,
@@ -18,9 +23,7 @@ export const useStyles = makeStyles((theme: Theme) =>
     main: {
       flex: 1,
       padding: 40,
-      // [theme.breakpoints.up('sm')]: {
-      //   padding: 0,
-      // },
+      // overflowX: 'hidden',
     },
   })
 );
