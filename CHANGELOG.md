@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/TonyOuma/analyticsplatform/compare/v1.1.0...v1.1.1) (2020-12-19)
+
+
+### Bug Fixes
+
+* folder restructure & app styling ([ce3f4c2](https://github.com/TonyOuma/analyticsplatform/commit/ce3f4c2241cd3e1dae742db76c3ba28a599fcb0b))
+
 # [1.1.0](https://github.com/TonyOuma/analyticsplatform/compare/v1.0.2...v1.1.0) (2020-12-19)
 
 
