@@ -4,7 +4,7 @@ import { Switch, Redirect, Route } from 'react-router-dom';
 import { AnalyticsPage, HomePage } from '../views/Dashboard/views';
 import WithLayoutRoute from './WithLayoutRoute';
 
-import Dashboard from '../views/Dashboard';
+import Dashboard from '../shared/Layout/DashboardLayout';
 
 const Routes: React.FC<{}> = () => {
   return (

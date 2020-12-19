@@ -1,36 +1,37 @@
-import React, { FC } from 'react';
+import React from 'react';
+
+import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 
-import CssBaseline from '@material-ui/core/CssBaseline';
-import { createStyles, makeStyles } from '@material-ui/core/styles';
+import DashboardLayout from '.';
+import { HeaderComponent, Sidebar } from './Content';
+import { useStyles } from './styles';
 
-const useStyles = makeStyles(() =>
-  createStyles({
-    root: {
-      display: 'flex',
-      minHeight: '100vh',
-      // paddingRight: 20,
-      // paddingLeft: 70,
-      // overflow: 'hidden',
-    },
-  })
-);
-
-const DashboardLayout: FC<React.PropsWithChildren<{}>> = (props) => {
+const DashboardPage: React.FC<React.PropsWithChildren<{}>> = (props) => {
+  // eslint-disable-next-line react/prop-types
   const { children } = props;
   const classes = useStyles();
   return (
-    <>
-      <div className={classes.root}>
-        <CssBaseline />
-        {children}
-      </div>
-    </>
+    <div className={classes.root}>
+      {/* Navbar component */}
+      <nav>
+        <Sidebar />
+      </nav>
+      {/* EndNavbarComponent */}
+
+      {/* Main Page Component */}
+      <Box className={classes.app}>
+        <HeaderComponent />
+        <main className={classes.main}>{children}</main>
+      </Box>
+
+      {/* End Main Page Component */}
+    </div>
   );
 };
 
-DashboardLayout.propTypes = {
+DashboardPage.propTypes = {
   children: PropTypes.any,
 };
 
-export default DashboardLayout;
+export default DashboardPage;
