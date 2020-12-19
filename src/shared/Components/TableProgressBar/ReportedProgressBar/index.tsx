@@ -19,10 +19,11 @@ const theme = createMuiTheme({
     MuiLinearProgress: {
       root: {
         borderRadius: 4,
-        height: 7,
+        height: 5,
       },
       bar1Determinate: {
         borderRadius: 4,
+        backgroundImage: `linear-gradient(to right,#4E1ED4, #74a3ff 100%)`,
       },
       colorPrimary: {
         backgroundColor: 'transparent',
