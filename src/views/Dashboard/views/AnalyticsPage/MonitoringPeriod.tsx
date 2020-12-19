@@ -29,7 +29,7 @@ const useStyles = makeStyles({
   cardStyles: {
     boxShadow: 'none',
     border: '1px solid rgba(0, 0, 0, 0.23)',
-    height: 35,
+    height: 60,
   },
   textStyle: {
     color: colors.primary,
@@ -57,7 +57,7 @@ const MonitoringPeriod: React.FC<{}> = () => {
             <Card className={classes.cardStyles}>
               <CardContent style={{ padding: '16px 10px' }}>
                 <Box style={{ display: 'flex', alignItems: 'center' }}>
-                  <Typography style={{ paddingLeft: 30 }}>Hello</Typography>
+                  {/* <Typography style={{ paddingLeft: 30 }}>Hello</Typography> */}
                   <IconButton></IconButton>
                 </Box>
               </CardContent>

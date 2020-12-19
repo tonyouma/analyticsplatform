@@ -36,7 +36,7 @@ const MonitorCardComponent: React.FC<ICardProps> = (props) => {
         <Typography>{title}</Typography>
         <Box display="flex" alignItems="center">
           <Box>
-            <Typography variant="body2">{count}</Typography>
+            <Typography variant="body2" style={{ color: colors.primary}}>{count}</Typography>
             <Typography style={{ color: colors.textSecondary }}>
               {chartTitle}
             </Typography>
@@ -44,7 +44,7 @@ const MonitorCardComponent: React.FC<ICardProps> = (props) => {
               {icon} {countChange}
             </Typography>
           </Box>{' '}
-          <Box width={'63%'}>
+          <Box width={'62%'}>
             <Line data={data} options={options} type={type} />
           </Box>{' '}
         </Box>

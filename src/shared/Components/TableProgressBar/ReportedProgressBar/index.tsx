@@ -49,7 +49,6 @@ const ReportedProgressBar: React.FC<IProgressProps> = (props) => {
       <Box display="flex" alignItems="center">
         <Typography
           variant="body2"
-          color="textSecondary"
         >{`${value}`}</Typography>
         <Box width="100%" ml={1}>
           <LinearProgress variant="determinate" value={normalise(value)} />

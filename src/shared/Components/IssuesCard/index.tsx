@@ -21,6 +21,9 @@ interface IVisitProps {
 const cardStyles: React.CSSProperties = {
   boxShadow: 'none',
   border: '1px solid rgba(0, 0, 0, 0.23)',
+  whiteSpace: 'nowrap',
+  overflow: 'hidden',
+  textOverflow: 'ellipsis',
 };
 
 const IssuesCard: React.FC<IVisitProps> = (props) => {
