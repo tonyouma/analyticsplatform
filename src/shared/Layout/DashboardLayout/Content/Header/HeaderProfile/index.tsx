@@ -5,7 +5,7 @@ import React from 'react';
 
 import { Grid, Box, Avatar, Typography } from '@material-ui/core';
 
-import ProfilePhoto from '../../../../../assets/profile.png';
+import ProfilePhoto from '../../../../../../assets/profile.png';
 const user_name: string = 'Sandra Mamai';
 const user_email: string = 'smamai@accesafaya.com';
 // const user_name_initials = 'SM';
