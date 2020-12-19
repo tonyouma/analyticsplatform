@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/TonyOuma/analyticsplatform/compare/v1.0.2...v1.1.0) (2020-12-19)
+
+
+### Features
+
+* update table progressbar styling ([b33edcb](https://github.com/TonyOuma/analyticsplatform/commit/b33edcb68db92ba570a06de45457bfdc5b40f7ca))
+
 ## [1.0.2](https://github.com/TonyOuma/analyticsplatform/compare/v1.0.1...v1.0.2) (2020-12-19)
 
 
