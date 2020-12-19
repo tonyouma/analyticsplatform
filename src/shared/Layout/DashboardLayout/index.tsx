@@ -3,6 +3,7 @@ import React from 'react';
 import Box from '@material-ui/core/Box';
 import PropTypes from 'prop-types';
 
+import { Outlet } from 'react-router-dom'
 import DashboardLayout from '.';
 import { HeaderComponent, Sidebar } from './Content';
 import { useStyles } from './styles';
@@ -22,7 +23,7 @@ const DashboardPage: React.FC<React.PropsWithChildren<{}>> = (props) => {
       {/* Main Page Component */}
       <Box className={classes.app}>
         <HeaderComponent />
-        <main className={classes.main}>{children}</main>
+        <main className={classes.main}><Outlet /></main>
       </Box>
 
       {/* End Main Page Component */}
