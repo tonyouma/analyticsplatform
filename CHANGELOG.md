@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/TonyOuma/analyticsplatform/compare/v1.0.1...v1.0.2) (2020-12-19)
+
+
+### Bug Fixes
+
+* site navigation ([1e7e7ca](https://github.com/TonyOuma/analyticsplatform/commit/1e7e7ca3a2611223e3bc9b8f2822cf28c5972382))
+
 ## [1.0.1](https://github.com/TonyOuma/analyticsplatform/compare/v1.0.0...v1.0.1) (2020-12-18)
 
 
