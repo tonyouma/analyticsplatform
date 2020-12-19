@@ -4,7 +4,7 @@ import { AppBar, Grid, Toolbar } from '@material-ui/core';
 import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
 import { Plus as AddIcon } from 'react-feather';
 
-import { ButtonComponent } from '../../../../shared/Components';
+import { ButtonComponent } from '../../../../Components';
 
 import HeaderProfile from './HeaderProfile';
 import HeaderProgressBar from './HeaderProgressBar';

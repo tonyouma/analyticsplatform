@@ -37,8 +37,8 @@ const TableComponent: React.FC<{}> = () => {
 
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <PerfectScrollbar>
+      <PerfectScrollbar>
+        <ThemeProvider theme={theme}>
           <TableContainer style={containerStyles} component={Paper}>
             <Table className={classes.table}>
               {/* Table Head */}
@@ -92,8 +92,8 @@ const TableComponent: React.FC<{}> = () => {
               </TableBody>
             </Table>
           </TableContainer>
-        </PerfectScrollbar>
-      </ThemeProvider>
+        </ThemeProvider>
+      </PerfectScrollbar>
     </>
   );
 };
