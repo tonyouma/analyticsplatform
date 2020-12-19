@@ -1,3 +1,4 @@
 import AnalyticsPage from './AnalyticsPage';
+import HomePage from './Homepage';
 
-export { AnalyticsPage };
+export { AnalyticsPage, HomePage };

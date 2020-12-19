@@ -6,7 +6,7 @@ interface IProps {
   component: any;
   layout: any;
   path: string;
-  exact: boolean;
+  exact?: boolean;
 }
 
 const WithLayoutRoute: React.FC<IProps> = (props) => {
