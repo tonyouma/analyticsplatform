@@ -8,8 +8,8 @@ import {
   dataOne,
   dataTwo,
   dataThree,
-} from '../../../../../shared/data/chartData';
-import { MonitorCardComponent } from '../../../../../shared/Components';
+} from '../../../../../../shared/data/chartData';
+import { MonitorCardComponent } from '../../../../../../shared/Components';
 
 const chartTitleOne: string = 'patients';
 const countOne = '13k';

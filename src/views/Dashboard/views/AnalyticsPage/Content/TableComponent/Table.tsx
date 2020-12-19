@@ -7,24 +7,26 @@ import {
   TableHead,
   TableRow,
   Typography,
+  TableContainer,
+  Paper,
   Box,
+  ThemeProvider
 } from '@material-ui/core';
 
-import { ThemeProvider } from '@material-ui/core/styles';
+import PerfectScrollbar from 'react-perfect-scrollbar';
 import { CaretUpOutlined, CaretDownOutlined } from '@ant-design/icons';
 
-import { staffData } from '../../../../../shared/data/staffData';
+import { colors } from '../../../../../../theme/theme'
+import { staffData } from '../../../../../../shared/data/staffData';
 import { theme, useStyles } from './styles';
 import {
   EfficientProgressBar,
   ReportedProgressBar,
-} from '../../../../../shared/Components';
+} from '../../../../../../shared/Components';
 
 const iconUp = <CaretUpOutlined style={{ fontSize: '16px' }} />;
 const iconDown = <CaretDownOutlined style={{ fontSize: '16px' }} />;
 
-import PerfectScrollbar from 'react-perfect-scrollbar';
-import { TableContainer, Paper } from '@material-ui/core';
 
 const containerStyles: React.CSSProperties = {
   boxShadow: '0px 2px 6px rgba(0, 0, 0, 0.07)',
@@ -32,6 +34,13 @@ const containerStyles: React.CSSProperties = {
   marginTop: 20,
 };
 
+const styledText: React.CSSProperties = {
+ color: colors.primary
+};
+
+const styledTextInfo: React.CSSProperties = {
+  color: colors.textSecondary
+ };
 const TableComponent: React.FC<{}> = () => {
   const classes = useStyles();
 
@@ -59,7 +68,8 @@ const TableComponent: React.FC<{}> = () => {
                     <TableCell style={{ textAlign: 'center' }}>
                       {staff.id}
                     </TableCell>
-                    <TableCell>{staff.name}</TableCell>
+                    <TableCell><Typography style={styledText}>{staff.name}
+                      </Typography></TableCell>
                     <TableCell>
                       <Box
                         display="flex"
@@ -67,7 +77,7 @@ const TableComponent: React.FC<{}> = () => {
                         width="65%"
                       >
                         <Typography> {staff.npsDelta}</Typography>
-                        <Typography>{staff.efDeltaChange}</Typography>
+                        <Typography style={styledTextInfo}>{staff.efDeltaChange}</Typography>
                         {/* <Typography>{staff.icon}</Typography> */}
                       </Box>
                     </TableCell>
@@ -78,7 +88,7 @@ const TableComponent: React.FC<{}> = () => {
                         width="65%"
                       >
                         <Typography> {staff.efDelta}</Typography>
-                        <Typography>{staff.efDeltaChange}</Typography>
+                        <Typography style={styledTextInfo}>{staff.efDeltaChange}</Typography>
                       </Box>
                     </TableCell>
                     <TableCell style={{ width: '20%', paddingRight: 30 }}>
