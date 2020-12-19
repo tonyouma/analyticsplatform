@@ -12,8 +12,8 @@ import { visits } from '../../../../shared/data/visitInfo';
 import MoreVertIcon from '@material-ui/icons/MoreVert';
 import KeyIssues from './KeyIssues';
 import MonitoringPeriod from './MonitoringPeriod';
-import { TableComponent } from './TableComponent';
-import MonitorCard from './MonitorCards';
+import { TableComponent } from './Content/TableComponent';
+import MonitorCard from './Content/MonitorCards';
 
 const icon = MoreVertIcon;
 const margin = 20;

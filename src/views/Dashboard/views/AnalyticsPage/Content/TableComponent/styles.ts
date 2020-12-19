@@ -1,5 +1,5 @@
 import { createMuiTheme, makeStyles } from '@material-ui/core/styles';
-import { fontWeight } from '../../../../../theme/theme';
+import { fontWeight } from '../../../../../../theme/theme';
 
 export const theme = createMuiTheme({
   overrides: {
