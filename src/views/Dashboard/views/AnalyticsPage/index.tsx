@@ -1,24 +1,16 @@
 import React from 'react';
 
-import { Typography, Container, Grid, Box } from '@material-ui/core';
+import { Typography, Container, Grid } from '@material-ui/core';
 
-import {
-  VisitCard,
-  TitleComponent,
-  Wrapper,
-} from '../../../../shared/Components';
-import { visits } from '../../../../shared/data/visitInfo';
-
-import MoreVertIcon from '@material-ui/icons/MoreVert';
 import KeyIssues from './KeyIssues';
 import MonitoringPeriod from './MonitoringPeriod';
 import { TableComponent } from './Content/TableComponent';
 import MonitorCard from './Content/MonitorCards';
-
-const icon = MoreVertIcon;
-const margin = 20;
+import Visit from './Content/VisitItem/Visit';
+import { Outlet } from 'react-router-dom';
 
 const title: string = 'Analytics';
+
 const AnalyticsPage: React.FC<{}> = () => {
   return (
     <Container maxWidth={false}>
@@ -26,20 +18,7 @@ const AnalyticsPage: React.FC<{}> = () => {
 
       <Grid container spacing={4}>
         <Grid item sm={3} xs={12}>
-          <Wrapper>
-            <TitleComponent>Visits</TitleComponent>
-            <Box>
-              {visits.map((visit, index) => (
-                <VisitCard
-                  location={visit.location}
-                  visit_count={visit.visit_count}
-                  icon={icon}
-                  key={index}
-                  margin={margin}
-                />
-              ))}
-            </Box>
-          </Wrapper>
+          <Visit />
         </Grid>
         <Grid item sm={9} xs={12}>
           <KeyIssues />
