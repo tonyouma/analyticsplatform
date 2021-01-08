@@ -20,7 +20,7 @@ interface IVisitProps {
 
 const cardStyles: React.CSSProperties = {
   boxShadow: 'none',
-  border: '1px solid rgba(0, 0, 0, 0.23)',
+  border: '1px solid rgba(0, 0, 0, 0.12)',
   whiteSpace: 'nowrap',
   overflow: 'hidden',
   textOverflow: 'ellipsis',
@@ -31,7 +31,7 @@ const IssuesCard: React.FC<IVisitProps> = (props) => {
 
   return (
     <Card style={cardStyles}>
-      <CardContent style={{ padding: '5px 0 5px 5px' }}>
+      <CardContent style={{ padding: '5px 5px 5px 13px' }}>
         <Box
           style={{
             display: 'flex',
@@ -47,7 +47,7 @@ const IssuesCard: React.FC<IVisitProps> = (props) => {
               {location}
             </Typography>
           </Box>
-          <IconButton>
+          <IconButton size="small">
             {' '}
             <MoreVertIcon />
           </IconButton>
